@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @doctor.name %>
+</p>
+
+<%= link_to 'Edit', edit_admin_doctor_path(@doctor) %> |
+<%= link_to 'Back', admin_doctors_path %>
