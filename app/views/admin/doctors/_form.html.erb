@@ -16,6 +16,16 @@
     <%= form.text_field :name %>
   </div>
 
+  <div class="field">
+    <%= form.label :hospitals %>
+    <%= form.collection_check_boxes :hospital_ids, Hospital.all, :id, :name do |h| %>
+      <div class="collection-check-box">
+        <%= h.check_box %>
+        <%= h.label %>
+      </div>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

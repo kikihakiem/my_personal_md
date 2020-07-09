@@ -4,6 +4,10 @@
   <strong>Name:</strong>
   <%= @doctor.name %>
 </p>
+<p>
+  <strong>Hospitals:</strong>
+  <%= @doctor.hospital_names %>
+</p>
 
 <%= link_to 'Edit', edit_admin_doctor_path(@doctor) %> |
 <%= link_to 'Back', admin_doctors_path %>

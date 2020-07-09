@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Doctors</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     <% @hospitals.each do |hospital| %>
       <tr>
         <td><%= hospital.name %></td>
+        <td><%= hospital.doctor_names %></td>
         <td><%= link_to 'Show', admin_hospital_path(hospital) %></td>
         <td><%= link_to 'Edit', edit_admin_hospital_path(hospital) %></td>
         <td><%= link_to 'Destroy', admin_hospital_path(hospital), method: :delete, data: { confirm: 'Are you sure?' } %></td>

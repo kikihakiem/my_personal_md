@@ -4,7 +4,7 @@ class Admin::HospitalsController < ApplicationController
   # GET /admin/hospitals
   # GET /admin/hospitals.json
   def index
-    @hospitals = Hospital.all
+    @hospitals = Hospital.includes(:doctors).all
   end
 
   # GET /admin/hospitals/1

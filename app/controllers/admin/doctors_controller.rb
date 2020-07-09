@@ -4,7 +4,7 @@ class Admin::DoctorsController < ApplicationController
   # GET /admin/doctors
   # GET /admin/doctors.json
   def index
-    @doctors = Doctor.all
+    @doctors = Doctor.includes(:hospitals).all
   end
 
   # GET /admin/doctors/1
@@ -69,6 +69,6 @@ class Admin::DoctorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def doctor_params
-      params.require(:doctor).permit(:name)
+      params.require(:doctor).permit(:name, hospital_ids: [])
     end
 end
